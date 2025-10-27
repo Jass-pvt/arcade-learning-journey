@@ -16,4 +16,6 @@ gcloud compute forwarding-rules create cp-ff --load-balancing-scheme=EXTERNAL --
 sleep 30
 IP_ADDRESS=$(gcloud compute addresses describe example-ip --format="get(address)" --global)
 echo "This is IP address: $IP_ADDRESS"
+
 curl http://$IP_ADDRESS
+
